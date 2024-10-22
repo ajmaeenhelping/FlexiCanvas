@@ -1,17 +1,12 @@
 <?
 	//date_default_timezone_set("Malaysia/Kuala_Lumpur");
 	session_start();
-	$db = mysqli_connect("localhost","catmgr_canvas","VPmtVYoES31Racgc", "catmgr_canvas") or die("Cannot connect to database.");
+	$db = mysqli_connect("localhost","db_name","db_password", "db_schema") or die("Cannot connect to database.");
 	$session_pfx = "canvas_";
-	$admin_spfx = "canvasa_";
-	//pwd = VPmtVYoES31Racgc
-	//uname = catmgr_canvas
 	$ver=3.37;
-	$site_name = "KOSE";
-	$company_name = "KOSE";
-	$mail_sender = "noreply@rubysb.com";
-	$mail_recipient = "info@rubysoft.com.my";
-	$site_url = "http://rubysb.com/canvas/";	//without www.
+	$site_name = "My site Name";
+	$company_name = "My Company Name";
+	$site_url = "localhost";
 
 	//form parameters
 	function hsc($s) {return htmlspecialchars($s,ENT_QUOTES);}
@@ -181,42 +176,8 @@
 		}
 	}
 
-	// function doupdate($table = "", $values = array(), $cond = array())
-	// {
-	// 	$sql = "UPDATE `" . $table . "` SET ";
-	// 	$vs = "";
-	// 	foreach ($values as $k => $v) {
-	// 		$v = clean($v);
-	// 		$vs .= ($vs == "" ? "" : ", ") . " `" . $k . "`='" . $v . "'";
-
-	// 		if (!empty($cond["AND"]))
-	// 			foreach ($cond["AND"] as $k2 => $v2) $cond["AND"][$k2] = str_replace("#" . $k . "#", $v, $v2);
-	// 		if (!empty($cond["OR"]))
-	// 			foreach ($cond["OR"] as $k2 => $v2) $cond["OR"][$k2] = str_replace("#" . $k . "#", $v, $v2);
-	// 	}
-	// 	$sql .= $vs . " WHERE id > 0 ";
-	// 	$w = "";
-	// 	if (!empty($cond)) {
-	// 		if (!empty($cond["AND"])) $w .= " AND " . implode(" AND ", $cond["AND"]);
-	// 		if (!empty($cond["OR"])) $w .= " OR " . implode(" OR ", $cond["OR"]);
-	// 	}
-
-	// 	$sql .= $w;
-	// 	return mq($sql);
-	// }
-
-
-	if (frm("y")==1) {set("y",1);} $y=get("y");
-	if (frm("z")==1) {set("z",1);} $z=get("z");
-	//if ($z=="") {exit;}
-
 	$this_file = substr($_SERVER['PHP_SELF'],strrpos($_SERVER['PHP_SELF'],"/")+1);
 	if (strpos($this_file,"?")!==false) {$this_file = substr($this_file,0,strpos($this_file,"?"));}
- 	//if ($z=="" && $this_file=="index.php") {go("home.php?z=1");}
- 	//set("z",1);
-
  	$this_page = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-
- 	$page = frm("page");
 
 ?>
