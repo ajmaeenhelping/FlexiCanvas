@@ -1,0 +1,456 @@
+@font-face {
+    font-family: "Mistral";
+    src: url("../fonts/MISTRAL.TTF");
+}
+/* Disable pinch-to-zoom but allow other touch gestures */
+html {
+    touch-action: manipulation;
+    zoom: 1 !important;
+    zoom: 100% !important;
+    -ms-touch-action: manipulation;
+}
+
+body {
+    overflow: hidden;
+    height:100%;
+    touch-action: pan-x pan-y !important;
+    user-select: none !important;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+h2 {
+    font-size: 46px;
+    color: #23418d;
+}
+h1,
+h2,
+h3,
+p {
+    color: #fff;
+}
+
+hr {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 3px solid #fff;
+    border-color: white;
+}
+
+.border-left {
+    border-left: 1px solid #000;
+}
+.text-black {
+    color: #23418d;
+}
+
+.btn {
+    background: #0066ae;
+    border: 0px;
+}
+
+* .unselectable {
+    user-select: none;
+}
+
+.main-bg {
+    width: 1080px; /* Set a fixed width */
+    height: 1420px; /* Set a fixed height */
+    background-image: url("../../images/fullbackground3.jpg");
+    
+    background-size: cover; /* Adjusts the image size to cover the entire container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    /* You can also adjust other background properties, like position */
+    background-position: center; /* Center the background image */
+    /* Add other styling for your container as needed */
+    padding: 20px; /* Example padding for content inside the container */
+    position: relative;
+}
+
+.confirm-bg {
+    width: 1080px; /* Set a fixed width */
+    height: 1920px; /* Set a fixed height */
+    background-image: url("../../images/background_totebag3.jpg");
+    background-size: cover; /* Adjusts the image size to cover the entire container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    /* You can also adjust other background properties, like position */
+    background-position: center; /* Center the background image */
+    /* Add other styling for your container as needed */
+    padding: 20px; /* Example padding for content inside the container */
+    position: relative;
+    top:0px;
+}
+
+.image-box {
+    width: 1080px; /* Set a fixed width */
+    height: 458px; /* Set a fixed height */
+    background-image: url("../../images/KOSE_BG-08.png");
+    background-size: cover; /* Adjusts the image size to cover the entire container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    /* You can also adjust other background properties, like position */
+    background-position: center; /* Center the background image */
+    /* Add other styling for your container as needed */
+    padding: 20px; /* Example padding for content inside the container */
+    position: relative;
+    z-index: 10px;
+}
+
+.blue-bg {
+    /* position: fixed; */
+    bottom: 0;
+    top: 159px;
+    left: 0;
+    width: 90%;
+    height: 100vh;
+    background-color: #807474;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.home-bg {
+    width: 1080px; /* Set a fixed width */
+    height: 1920px; /* Set a fixed height */
+    /* background-image: url("../../images/KOSE_BG-06.png"); */
+    background-image: url("../../images/fullbackground.jpg");
+    background-size: cover; /* Adjusts the image size to cover the entire container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    /* You can also adjust other background properties, like position */
+    background-position: center; /* Center the background image */
+    /* Add other styling for your container as needed */
+    padding: 20px; /* Example padding for content inside the container */
+    position: relative;
+}
+
+.blue-bg h2 {
+    font-size: 24px;
+}
+.blue-bg h1 {
+    font-size: 40px;
+}
+
+.mobile {
+    background-image: url("../../images/palebg.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#canvas-container {
+    position: relative;
+    width: 596px;
+    height: 654.6px;
+    top: 177px;
+    left: 224px;
+    /* border: 1px solid #000; */
+}
+
+.confirm-bg img {
+    width: 545px;
+    position: absolute;
+    top: 657px;
+    left: 268px;
+}
+
+.tab-box {
+    display: grid;
+    position: absolute;
+    top: 401px;
+    right: 0px;
+}
+
+.sliderbg {
+    position: absolute;
+    right: 150px;
+    top: 695px;
+}
+.sliderbg2 {
+    position: absolute;
+    right: 150px;
+    top: 695px;
+}
+.sliderbg3 {
+    position: absolute;
+    right: 150px;
+    top: 695px;
+}
+.rangetext{
+    position: absolute;
+    right: 50px;
+    top: 910px;
+    z-index:1001; 
+    width: 300px; /* Adjust the width as needed */
+}
+
+.rangetext2{
+    position: absolute;
+    right: 50px;
+    top: 910px;
+    z-index:1000; 
+    width: 300px; /* Adjust the width as needed */
+}
+.rangetext3{
+    position: absolute;
+    right: 50px;
+    top: 910px;
+    z-index:999; 
+    width: 300px; /* Adjust the width as needed */
+}
+.image-container {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column; /* Arrange images vertically */
+    /* justify-content: space-between; */
+    align-items: center;
+    z-index: 1; /* Place it above textholder.jpg */
+}
+
+.image-container img {
+    width: 100%; /* Make each image fill the container horizontally */
+}
+
+.text-bottom {
+    position: absolute;
+    bottom: 1px;
+    left: 275px;
+    /* text-align: center; */
+    font-size: 18px;
+    color: #23418d;
+}
+
+.pink-box {
+    width: 1080px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    background-color: #fd6cd1;
+    padding: 20px; /* Example padding for content inside the container */
+}
+
+#textInput::placeholder {
+    color: #fff; /* Change this to the color you want */
+}
+
+.pink-box p {
+    font-size: 36px;
+    margin: 0px;
+}
+.darker-pink-box {
+    width: 900px;
+    height: 826px;
+    padding: 80px;
+    background-color: #656361c2;
+    font-size: 36px;
+    position: absolute;
+    left: 88px;
+    bottom: -2px;
+    /* border-radius: 11px; */
+    border-radius: 20px 20px 0px 0px;
+}
+
+.darker-pink-box img {
+    width: auto;
+    height: 150px;
+}
+
+.white-box {
+    width: 1080px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    background-color: #fff;
+    padding: 20px; /* Example padding for content inside the container */
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+.custom-btn {
+    position: absolute;
+    top: 1238px;
+    left: 96px;
+    width: 900px;
+    height: 80px;
+    background-color: #e9cdd9;
+}
+
+.owl-carousel .item {
+    display: flex;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 250px;
+    /* background-image: url('../../images/KOSE_SELECT.png'); */
+}
+
+.owl-item.active {
+    width: 301.667px !important;
+}
+
+/* .item img{
+    border:1px solid #000;
+    border-radius:50%;
+    cursor: pointer;
+} */
+
+#img-container img {
+    /* border: 1px solid #000; */
+    border-radius: 50%;
+    /* cursor: pointer;
+    width: 250px; */
+}
+
+.draggable {
+    position: absolute;
+    cursor: move;
+}
+
+#sectionB {
+    display: none;
+}
+
+#sectionC {
+    display: none;
+}
+
+#textInput {
+    border: none;
+    width: 1041px;
+    height: 55px;
+    background: #00b1fe;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+}
+/* .keyboard {
+    position: absolute;
+    left: 59px;
+    bottom: 99px;
+    width: 962px;
+    height: 300px;
+    padding: 5px 0;
+    background: #2d6d9c;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: bottom 0.4s;
+} */
+
+.btn-exit img {
+    top: 28px;
+    /* right: 28px; */
+    font-size: 18px;
+    position: absolute;
+    right: 37px;
+}
+
+#sectionD {
+    display: none;
+}
+
+.campaign-bx {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.campaign-bx p {
+    color: black;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--bs-body-bg);
+    background-clip: padding-box;
+    border: 2px solid #0066ae;
+    border-radius: 0;
+    transition:
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+}
+
+label {
+    padding-left: 10px;
+}
+
+.slide-out-element {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: -200px;
+    transition: right 0.3s ease;
+}
+
+.animated-element {
+    width: 1080px;
+    height: 1591px;
+    position: relative;
+    right: -100%;
+    /* animation: slideFromLeft 1s ease-in-out forwards; */
+    animation: slideInOut 4s ease-in-out infinite;
+}
+
+
+@keyframes slideInOut {
+    0% {
+        left: -100%; /* Start position */
+    }
+    50% {
+        left: 0%; /* Middle position (image fully visible) */
+    }
+    100% {
+        left: 100%; /* End position (off the screen to the left) */
+    }
+}
+
+@keyframes slideFromLeft {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes slideToRight {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+#ads{
+
+}
+
+#home {
+    display: none;
+}
+
+#index {
+    display: none;
+}
+
+#confirm{
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
