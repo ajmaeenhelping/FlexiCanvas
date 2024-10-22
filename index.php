@@ -9,94 +9,6 @@ if (isset($_POST['mytext'])) {
     file_put_contents($file_name, $data);
 }
 ?>
-<style>
-    #textInput {
-    border: none;
-    width: 1041px;
-    height: 55px;
-    background: #00b1fe;
-    font-size: 36px;
-    color: #fff;
-    text-align: center;
-    margin-top: 30px;
-}
-
-    #canvas-container {
-        position: relative;
-        width: 800px;
-        height: 1000px;
-        top: 0;
-        left: 20px;
-        border: 1px solid #000;
-    }
-
-    #img-container {
-        position: absolute;
-        width: 200px;
-        height: 1000px;
-        left: 850px;
-        top: 270px;
-        border: 1px solid #000;
-    }
-
-    button {
-        width: 200px;
-        height: 60px;
-        font-weight: 700;
-        font-size: 30px;
-        background-color: #2d6d9c;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        color: white;
-    }
-
-    .slider label{
-        font-size: 40px;
-    }
-
-    .draggable {
-        position: absolute;
-        cursor: move;
-    }
-
-    input[type="range"] {
-        -webkit-appearance: none;
-        width: 160px;
-        height: 20px;
-        margin-top: 5px;
-        top: 100px;
-        /* margin:10px 50px; */
-        background: linear-gradient(to right, #81bcea 0%, #2d6d9c 100%);
-        background-size: 200px 20px;
-        background-position: center;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        outline: none;
-    }
-
-    input[type="range"]::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        width: 30px;
-        height: 40px;
-        background: #91ccf4;
-        position: relative;
-        z-index: 3;
-        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
-    }
-
-    input[type="range"]::-webkit-slider-thumb:after {
-        content: " ";
-        width: 160px;
-        height: 10px;
-        position: absolute;
-        z-index: 1;
-        right: 20px;
-        top: 5px;
-        background: #91ccf4;
-        background: linear-gradient(to right, #f088fc 1%, #AC6CFF 70%);
-    }
-</style>
-
 <body>
     <div class="text-input text-center">
         <input type="text" id="textInput" placeholder="Enter text" class="use-keyboard-input" maxlength="5">
@@ -139,7 +51,7 @@ if (isset($_POST['mytext'])) {
         <button id="sizeminus" hidden="">- Size</button>
         <!-- <button id="rotateRight">Rotate Right</button> -->
     </div>
-    <? include_once('bu_js.php'); ?>
+    <? include_once('assets/js/canvas_js.php'); ?>
 </body>
 
 </html>
