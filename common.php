@@ -1,7 +1,7 @@
 <?
 	//date_default_timezone_set("Malaysia/Kuala_Lumpur");
 	session_start();
-	$db = mysqli_connect("localhost","db_name","db_password", "db_schema") or die("Cannot connect to database.");
+	//$db = mysqli_connect("localhost","db_name","db_password", "db_schema") or die("Cannot connect to database.");
 	$session_pfx = "canvas_";
 	$ver=3.37;
 	$site_name = "My site Name";
